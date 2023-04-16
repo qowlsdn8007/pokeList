@@ -1,3 +1,4 @@
+import './font.css';
 import GlobalStyle from './GlobalStyle.tsx';
 
 function App() {
