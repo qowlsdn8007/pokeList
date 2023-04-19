@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     line-height: 1;
     max-width: 420px; // 페이지 최대 너비 420px 고정
     min-height: 100vh;

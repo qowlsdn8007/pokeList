@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import Carousel from '../components/Carousal';
 import { CarList } from '../components/CarList';
 import CarousalSkeleton from '../components/Carousal/CarousalSkeleton';
 import CarListSkeleton from '../components/CarList/CarListSkeleton';
+import CommonErrorFallback from '../components/common/Error/CarErrorFallback';
 
 export default function CarListPage() {
   return (
@@ -13,13 +15,17 @@ export default function CarListPage() {
         <Title>차량 리스트</Title>
       </Header>
       <Label>특가 차량</Label>
-      <Suspense fallback={<CarousalSkeleton />}>
-        <Carousel />
-      </Suspense>
+      <ErrorBoundary FallbackComponent={CommonErrorFallback}>
+        <Suspense fallback={<CarousalSkeleton />}>
+          <Carousel />
+        </Suspense>
+      </ErrorBoundary>
       <Label>모든 차량</Label>
-      <Suspense fallback={<CarListSkeleton />}>
-        <CarList />
-      </Suspense>
+      <ErrorBoundary FallbackComponent={CommonErrorFallback}>
+        <Suspense fallback={<CarListSkeleton />}>
+          <CarList />
+        </Suspense>
+      </ErrorBoundary>
       <Outlet />
     </Container>
   );

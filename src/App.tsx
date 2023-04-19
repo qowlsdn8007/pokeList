@@ -6,11 +6,13 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import GlobalStyle from './GlobalStyle';
 import CarListPage from './pages/CarListPage';
 import { CarDetail } from './components/CarDetail';
 import Modal from './components/Modal';
 import CarDetailSkeleton from './components/CarDetail/CarDetailSkeleton';
+import CommonErrorFallback from './components/common/Error/CarErrorFallback';
 
 // api base url 설정
 axios.defaults.baseURL = 'http://localhost:8080';
@@ -29,9 +31,11 @@ const router = createBrowserRouter([
         path: '/list/:carClassId',
         element: (
           <Modal>
-            <Suspense fallback={<CarDetailSkeleton />}>
-              <CarDetail />
-            </Suspense>
+            <ErrorBoundary FallbackComponent={CommonErrorFallback}>
+              <Suspense fallback={<CarDetailSkeleton />}>
+                <CarDetail />
+              </Suspense>
+            </ErrorBoundary>
           </Modal>
         ),
       },
