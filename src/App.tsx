@@ -13,6 +13,7 @@ import { CarDetail } from './components/CarDetail';
 import Modal from './components/Modal';
 import CarDetailSkeleton from './components/CarDetail/CarDetailSkeleton';
 import CommonErrorFallback from './components/common/Error/CarErrorFallback';
+import RootBoundary from './pages/Error/RootErrorBoundary';
 
 // api base url 설정
 axios.defaults.baseURL = 'http://localhost:8080';
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Navigate to="/list" />,
+    ErrorBoundary: RootBoundary,
   },
   {
     path: '/list',
