@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useCallback, useRef } from 'react';
 import styled from 'styled-components';
 import { useSetRecoilState } from 'recoil';
 import useScrollable from './useScrollable';
@@ -17,31 +17,45 @@ function Carousel() {
   //  선택한 차량 id set
   const setCarClassId = useSetRecoilState(carClassId);
 
-  // 차량 선택 핸들러
-  const handleSelectCar = async (e: React.MouseEvent) => {
-    const carId = Number(e.currentTarget.id);
-
-    // 차량 id보다 fetch된 차량이 적다면 그만큼 fetch
-    if (data) {
-      const pageNum = data?.pages.length;
-      const selectedPageNum = Math.ceil(carId / 5);
-
-      if (selectedPageNum > pageNum) {
-        const diff = selectedPageNum - pageNum;
-        for (let i = 0; i < diff; i += 1) {
-          // eslint-disable-next-line no-await-in-loop
-          await fetchNextPage();
-        }
-      }
-    }
-    // 선택한 차량 id atom에 set => 스크롤 이동
-    setCarClassId(carId);
-  };
-
   // 마우스 스와이핑 로직
   const ref = useRef<HTMLDivElement>(null);
-  const { handleMouseDown, handleMouseLeave, handleMouseMove, handleMouseUp } =
-    useScrollable<HTMLDivElement>(ref);
+  const {
+    handleMouseDown,
+    handleMouseLeave,
+    handleMouseMove,
+    handleMouseUp,
+    isMouseMove,
+  } = useScrollable<HTMLDivElement>(ref);
+
+  // 차량 선택 핸들러
+  const handleSelectCar = useCallback(
+    async (e: React.MouseEvent) => {
+      // 마우스 무빙 시 클릭 방지
+      if (isMouseMove.current) {
+        isMouseMove.current = false;
+        return;
+      }
+
+      const carId = Number(e.currentTarget.id);
+
+      // 차량 id보다 fetch된 차량이 적다면 그만큼 fetch
+      if (data) {
+        const pageNum = data?.pages.length;
+        const selectedPageNum = Math.ceil(carId / 5);
+
+        if (selectedPageNum > pageNum) {
+          const diff = selectedPageNum - pageNum;
+          for (let i = 0; i < diff; i += 1) {
+            // eslint-disable-next-line no-await-in-loop
+            await fetchNextPage();
+          }
+        }
+      }
+      // 선택한 차량 id atom에 set => 스크롤 이동
+      setCarClassId(carId);
+    },
+    [setCarClassId, data, fetchNextPage]
+  );
 
   // 로딩 화면 출력
   if (isLoading) return <Skeleton />;
