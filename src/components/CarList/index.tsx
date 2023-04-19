@@ -8,11 +8,10 @@ import Car from '../Car';
 import { useScrollToTarget } from './useScrollToTarget';
 import carClassIdAtom from '../../recoil/atom/carIClassIdAtom';
 import Empty from './Empty';
-import CarListSkeleton from './CarListSkeleton';
 
 export function CarList() {
   // 차량 데이터 pagination 훅
-  const { data, fetchNextPage, hasNextPage, isLoading } = useGetCars();
+  const { data, fetchNextPage, hasNextPage } = useGetCars();
 
   // 맨 위로 핸들러
   const scrollToTop = () => {
@@ -52,9 +51,6 @@ export function CarList() {
     }
     resetCarId();
   }, [carId]);
-
-  // 로딩 화면 출력
-  if (isLoading) return <CarListSkeleton />;
 
   // 빈 화면일 때 출력
   if (cars.length === 0) return <Empty />;

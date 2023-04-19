@@ -5,10 +5,12 @@ import {
   Navigate,
 } from 'react-router-dom';
 import axios from 'axios';
+import { Suspense } from 'react';
 import GlobalStyle from './GlobalStyle';
 import CarListPage from './pages/CarListPage';
 import { CarDetail } from './components/CarDetail';
 import Modal from './components/Modal';
+import CarDetailSkeleton from './components/CarDetail/CarDetailSkeleton';
 
 // api base url 설정
 axios.defaults.baseURL = 'http://localhost:8080';
@@ -27,7 +29,9 @@ const router = createBrowserRouter([
         path: '/list/:carClassId',
         element: (
           <Modal>
-            <CarDetail />
+            <Suspense fallback={<CarDetailSkeleton />}>
+              <CarDetail />
+            </Suspense>
           </Modal>
         ),
       },

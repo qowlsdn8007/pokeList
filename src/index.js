@@ -11,12 +11,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  * react-query default config
  * 자동 재요청 0
  * 윈도우창 리포커싱 시 쿼리 재요청 비활성화
+ * suspense 활성화
  */
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
       retry: 0,
+      suspense: true,
     },
   },
 });

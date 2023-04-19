@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { ICarDetail } from './type';
 import { useGetCarDetail } from '../../queries/useGetCarDetail';
-import CarDetailSkeleton from './CarDetailSkeleton';
 
 interface IInfoItem {
   title: string;
@@ -16,10 +15,7 @@ export function CarDetail() {
   const id = Number(pathname.replace(regex, ''));
 
   // 차량 상세 데이터 훅
-  const { data: car, isLoading } = useGetCarDetail(id);
-
-  // 로딩 화면 출력
-  if (isLoading) return <CarDetailSkeleton />;
+  const { data: car } = useGetCarDetail(id);
 
   const {
     carClassName,

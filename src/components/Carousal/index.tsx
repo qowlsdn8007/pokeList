@@ -6,12 +6,11 @@ import { useGetSpecificCars } from '../../queries/useGetSpecificCars';
 import Car from '../Car';
 import carClassId from '../../recoil/atom/carIClassIdAtom';
 import { useGetCars } from '../../queries/useGetCars';
-import CarousalSkeleton from './CarousalSkeleton';
 import Empty from './Empty';
 
 function Carousel() {
   // 특가 차량 데이터  get
-  const { data: cars, isLoading } = useGetSpecificCars('특가');
+  const { data: cars } = useGetSpecificCars('특가');
   // 차량 데이터 페이지 get
   const { data, fetchNextPage } = useGetCars();
   //  선택한 차량 id set
@@ -57,8 +56,6 @@ function Carousel() {
     [setCarClassId, data, fetchNextPage]
   );
 
-  // 로딩 화면 출력
-  if (isLoading) return <CarousalSkeleton />;
   // 빈 화면일 때 출력
   if (!cars) return <Empty />;
 
