@@ -10,12 +10,21 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     font-size: 100%;
+    -webkit-touch-callout:none;
+    user-select: none;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
   }
 
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     line-height: 1;
-    max-width: 420px;
-    height: 100vh;
+    max-width: 420px; // 페이지 최대 너비 420px 고정
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     margin: 0;
     padding: 0;
