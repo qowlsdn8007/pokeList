@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 import SkeletonBox from '../common/SkeletonBox';
 
-function Skeleton() {
+function CarListSkeleton() {
   return (
     <Container>
-      <SubContainer>
+      <ImageContainer>
         <SkeletonBox translucent />
-      </SubContainer>
-      <SubContainer>
+      </ImageContainer>
+      <InfoContainer>
         <SkeletonBox translucent />
-      </SubContainer>
+      </InfoContainer>
     </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: 16px;
   align-items: center;
@@ -27,7 +27,7 @@ const Container = styled.div`
   padding: 20px 24px;
 `;
 
-const SubContainer = styled.div`
+const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,4 +35,12 @@ const SubContainer = styled.div`
   height: 120px;
 `;
 
-export default Skeleton;
+const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: 40px;
+`;
+
+export default CarListSkeleton;

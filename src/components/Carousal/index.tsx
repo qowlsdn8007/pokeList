@@ -6,7 +6,7 @@ import { useGetSpecificCars } from '../../queries/useGetSpecificCars';
 import Car from '../Car';
 import carClassId from '../../recoil/atom/carIClassIdAtom';
 import { useGetCars } from '../../queries/useGetCars';
-import Skeleton from './Skeleton';
+import CarousalSkeleton from './CarousalSkeleton';
 import Empty from './Empty';
 
 function Carousel() {
@@ -58,7 +58,7 @@ function Carousel() {
   );
 
   // 로딩 화면 출력
-  if (isLoading) return <Skeleton />;
+  if (isLoading) return <CarousalSkeleton />;
   // 빈 화면일 때 출력
   if (!cars) return <Empty />;
 

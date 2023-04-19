@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 import SkeletonBox from '../common/SkeletonBox';
 
-function Skeleton() {
+function CarousalSkeleton() {
   return (
     <Container>
-      <ImageContainer>
+      <SubContainer>
         <SkeletonBox translucent />
-      </ImageContainer>
-      <InfoContainer>
+      </SubContainer>
+      <SubContainer>
         <SkeletonBox translucent />
-      </InfoContainer>
+      </SubContainer>
     </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   gap: 16px;
   align-items: center;
@@ -27,7 +27,7 @@ const Container = styled.div`
   padding: 20px 24px;
 `;
 
-const ImageContainer = styled.div`
+const SubContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,4 @@ const ImageContainer = styled.div`
   height: 120px;
 `;
 
-const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 100%;
-  height: 40px;
-`;
-
-export default Skeleton;
+export default CarousalSkeleton;

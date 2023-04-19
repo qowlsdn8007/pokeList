@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SkeletonBox from '../common/SkeletonBox';
 
-function Skeleton() {
+function CarDetailSkeleton() {
   return (
     <Container>
       <ImageContainer>
@@ -87,4 +87,4 @@ const InfoItemContainer = styled.div`
   height: 16px;
 `;
 
-export default Skeleton;
+export default CarDetailSkeleton;
