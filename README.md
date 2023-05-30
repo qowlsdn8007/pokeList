@@ -47,5 +47,5 @@ json-server db.json --routes routes.json --port 8080
 
 ## api url
 
-- 차량 전체 리스트: `http://localhost:8080/carClasses`
-- 차량 상세 정보: `http://localhost:8080/carClasses/${carClassId}`
+- 포켓몬 전체 리스트: `http://localhost:8080/pokeClasses`
+- 포켓몬 상세 정보: `http://localhost:8080/pokeClasses/${pokeClassId}`

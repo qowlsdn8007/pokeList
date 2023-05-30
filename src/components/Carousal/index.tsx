@@ -2,19 +2,19 @@ import { useCallback, useRef } from 'react';
 import styled from 'styled-components';
 import { useSetRecoilState } from 'recoil';
 import useScrollable from './useScrollable';
-import { useGetSpecificCars } from '../../queries/useGetSpecificCars';
-import Car from '../Car';
-import carClassId from '../../recoil/atom/carIClassIdAtom';
-import { useGetCars } from '../../queries/useGetCars';
+import { useGetSpecificPokes } from '../../queries/useGetSpecificPokes';
+import Poke from '../Poke';
+import pokeClassId from '../../recoil/atom/PokeClassIdAtom';
+import { useGetPokes } from '../../queries/useGetPokes';
 import Empty from './Empty';
 
 function Carousel() {
-  // 특가 차량 데이터  get
-  const { data: cars } = useGetSpecificCars('특가');
-  // 차량 데이터 페이지 get
-  const { data, fetchNextPage } = useGetCars();
-  //  선택한 차량 id set
-  const setCarClassId = useSetRecoilState(carClassId);
+  // 특가 포켓몬 데이터  get
+  const { data: pokes } = useGetSpecificPokes('특가');
+  // 포켓몬 데이터 페이지 get
+  const { data, fetchNextPage } = useGetPokes();
+  //  선택한 포켓몬 id set
+  const setPokeClassId = useSetRecoilState(pokeClassId);
 
   // 마우스 스와이핑 로직
   const ref = useRef<HTMLDivElement>(null);
@@ -26,8 +26,8 @@ function Carousel() {
     isMouseMove,
   } = useScrollable<HTMLDivElement>(ref);
 
-  // 차량 선택 핸들러
-  const handleSelectCar = useCallback(
+  // 포켓몬 선택 핸들러
+  const handleSelectPoke = useCallback(
     async (e: React.MouseEvent) => {
       // 마우스 무빙 시 클릭 방지
       if (isMouseMove.current) {
@@ -35,12 +35,12 @@ function Carousel() {
         return;
       }
 
-      const carId = Number(e.currentTarget.id);
+      const pokeId = Number(e.currentTarget.id);
 
-      // 차량 id보다 fetch된 차량이 적다면 그만큼 fetch
+      // 포켓몬 id보다 fetch된 포켓몬이 적다면 그만큼 fetch
       if (data) {
         const pageNum = data?.pages.length;
-        const selectedPageNum = Math.ceil(carId / 5);
+        const selectedPageNum = Math.ceil(pokeId / 5);
 
         if (selectedPageNum > pageNum) {
           const diff = selectedPageNum - pageNum;
@@ -50,14 +50,14 @@ function Carousel() {
           }
         }
       }
-      // 선택한 차량 id atom에 set => 스크롤 이동
-      setCarClassId(carId);
+      // 선택한 포켓몬 id atom에 set => 스크롤 이동
+      setPokeClassId(pokeId);
     },
-    [setCarClassId, data, fetchNextPage]
+    [setPokeClassId, data, fetchNextPage]
   );
 
   // 빈 화면일 때 출력
-  if (!cars) return <Empty />;
+  if (!pokes) return <Empty />;
 
   return (
     <CarouselContainer
@@ -67,12 +67,12 @@ function Carousel() {
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
     >
-      {cars?.map((car) => (
-        <Slide key={car.carClassId}>
-          <Car
-            {...car}
-            onClick={handleSelectCar}
-            id={`${car.carClassId}`}
+      {pokes?.map((poke) => (
+        <Slide key={poke.pokeClassId}>
+          <Poke
+            {...poke}
+            onClick={handleSelectPoke}
+            id={`${poke.pokeClassId}`}
             textOverFlow
           />
         </Slide>

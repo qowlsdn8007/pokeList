@@ -1,49 +1,47 @@
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
-import { ICarDetail } from './type';
-import { useGetCarDetail } from '../../queries/useGetCarDetail';
+import { IPokeDetail } from './type';
+import { useGetPokeDetail } from '../../queries/useGetPokeDetail';
 
 interface IInfoItem {
   title: string;
   content: string;
 }
 
-export function CarDetail() {
-  // url에서 차량 id 값 추출
+export function PokeDetail() {
+  // url에서 포켓몬 id 값 추출
   const { pathname } = useLocation();
   const regex = /[^0-9]/g;
   const id = Number(pathname.replace(regex, ''));
 
-  // 차량 상세 데이터 훅
-  const { data: car } = useGetCarDetail(id);
+  // 포켓몬 상세 데이터 훅
+  const { data: poke } = useGetPokeDetail(id);
 
   const {
-    carClassName,
-    capacity,
-    carImage,
-    carModel,
-    fuel,
-    gearbox,
-    maker,
-    additionalOption,
-    safetyOption,
-  } = car as ICarDetail;
+    pokeClassName,
+    pokeImage,
+    type,
+    pokeModel,
+    height,
+    weight,
+    characteristic,
+  } = poke as IPokeDetail;
 
   // info grid에 들어갈 데이터, 루프를 통해 렌더링
   const infoItems: IInfoItem[] = [
-    { title: '제조사', content: maker },
-    { title: '분류', content: carModel },
-    { title: '연료', content: fuel },
-    { title: '변속방식', content: gearbox },
-    { title: '승차정원', content: `${capacity}` },
+    { title: '타입', content: type },
+    { title: '키', content: `${height}m` },
+    { title: '분류', content: pokeModel },
+    { title: '몸무게', content: `${weight}kg` },
+    { title: '특성', content: characteristic },
   ];
 
   return (
     <Container>
       <ImageContainer>
-        <Image src={carImage} alt="차량 이미지" />
+        <Image src={pokeImage} alt="포켓몬 이미지" />
       </ImageContainer>
-      <CarName>{carClassName}</CarName>
+      <PokeName>{pokeClassName}</PokeName>
       <InfoGridContainer>
         {infoItems.map((item) => (
           <InfoItemContainer key={item.title}>
@@ -52,24 +50,6 @@ export function CarDetail() {
           </InfoItemContainer>
         ))}
       </InfoGridContainer>
-      <InfoFlexContainer>
-        <InfoItemContainer>
-          <InfoItemTitle>안전옵션</InfoItemTitle>
-          <InfoListItemContent>
-            {safetyOption?.map((option) => (
-              <InfoItemContent key={option}>- {option}</InfoItemContent>
-            ))}
-          </InfoListItemContent>
-        </InfoItemContainer>
-        <InfoItemContainer>
-          <InfoItemTitle>편의옵션</InfoItemTitle>
-          <InfoListItemContent>
-            {additionalOption?.map((option) => (
-              <InfoItemContent key={option}>- {option}</InfoItemContent>
-            ))}
-          </InfoListItemContent>
-        </InfoItemContainer>
-      </InfoFlexContainer>
     </Container>
   );
 }
@@ -102,7 +82,7 @@ const Image = styled.img`
   -moz-user-drag: none;
 `;
 
-const CarName = styled.h3`
+const PokeName = styled.h3`
   font-family: 'Spoqa Han Sans Neo';
   font-size: 24px;
   font-weight: 500;
@@ -114,14 +94,6 @@ const InfoGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 16px;
-  width: 100%;
-  height: 100%;
-`;
-
-const InfoFlexContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   gap: 16px;
   width: 100%;
   height: 100%;
@@ -151,13 +123,4 @@ const InfoItemContent = styled.span`
   text-align: start;
   color: #374553;
   line-height: 1.5;
-`;
-
-const InfoListItemContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  height: 100%;
-  padding: 8px 0;
 `;

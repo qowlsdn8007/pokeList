@@ -8,11 +8,11 @@ import axios from 'axios';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import GlobalStyle from './GlobalStyle';
-import CarListPage from './pages/CarListPage';
-import { CarDetail } from './components/CarDetail';
+import PokeListPage from './pages/PokeListPage';
+import { PokeDetail } from './components/PokeDetail';
 import Modal from './components/Modal';
-import CarDetailSkeleton from './components/CarDetail/CarDetailSkeleton';
-import CommonErrorFallback from './components/common/Error/CarErrorFallback';
+import PokeDetailSkeleton from './components/PokeDetail/PokeDetailSkeleton';
+import CommonErrorFallback from './components/common/Error/PokeErrorFallback';
 import RootBoundary from './pages/Error/RootErrorBoundary';
 
 // api base url 설정
@@ -27,15 +27,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/list',
-    element: <CarListPage />,
+    element: <PokeListPage />,
     children: [
       {
-        path: '/list/:carClassId',
+        path: '/list/:pokeClassId',
         element: (
           <Modal>
             <ErrorBoundary FallbackComponent={CommonErrorFallback}>
-              <Suspense fallback={<CarDetailSkeleton />}>
-                <CarDetail />
+              <Suspense fallback={<PokeDetailSkeleton />}>
+                <PokeDetail />
               </Suspense>
             </ErrorBoundary>
           </Modal>

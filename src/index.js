@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.hydrateRoot(document.getElementById('root'));
 
 /**
  * react-query default config
@@ -19,6 +19,10 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       suspense: true,
       useErrorBoundary: true,
+      cacheTime: 0,
+      staleTime: 0,
+      retryDelay: 1000,
+      retryOnMount: false,
     },
   },
 });

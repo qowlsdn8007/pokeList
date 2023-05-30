@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import CarSvgIcon from '../CarList/CarSvgIcon';
+import PokeSvgIcon from '../PokeList/PokeSvgIcon';
 
 function Empty() {
   return (
     <Container>
-      <CarSvgIcon />
-      <EmptyText>특가 차량이 없습니다.</EmptyText>
+      <PokeSvgIcon />
+      <EmptyText>특가 포켓몬이 없습니다.</EmptyText>
     </Container>
   );
 }

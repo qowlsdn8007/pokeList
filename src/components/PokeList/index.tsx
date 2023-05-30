@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGetCars } from '../../queries/useGetCars';
-import { ICarProps } from '../Car/type';
-import Car from '../Car';
+import { useGetPokes } from '../../queries/useGetPokes';
+import { IPokeProps } from '../Poke/type';
+import Poke from '../Poke';
 import { useScrollToTarget } from './useScrollToTarget';
-import carClassIdAtom from '../../recoil/atom/carIClassIdAtom';
+import pokeClassIdAtom from '../../recoil/atom/PokeClassIdAtom';
 import Empty from './Empty';
 
-export function CarList() {
-  // 차량 데이터 pagination 훅
-  const { data, fetchNextPage, hasNextPage } = useGetCars();
+export function PokeList() {
+  // 포켓몬 데이터 pagination 훅
+  const { data, fetchNextPage, hasNextPage } = useGetPokes();
 
   // 맨 위로 핸들러
   const scrollToTop = () => {
@@ -26,48 +26,48 @@ export function CarList() {
     fetchNextPage();
   };
 
-  // 차량 개수
-  const cars = data?.pages.flatMap((page) => page.data) ?? [];
+  // 포켓몬 개수
+  const pokes = data?.pages.flatMap((page) => page.data) ?? [];
 
-  // 캐러셀로부터 선택된 차량 id
-  const carId = useRecoilValue(carClassIdAtom);
+  // 캐러셀로부터 선택된 포켓몬 id
+  const pokeId = useRecoilValue(pokeClassIdAtom);
 
-  // 차량 id reset할 함수
-  const setCarId = useSetRecoilState(carClassIdAtom);
-  const resetCarId = () => setCarId(0);
+  // 포켓몬 id reset할 함수
+  const setPokeId = useSetRecoilState(pokeClassIdAtom);
+  const resetPokeId = () => setPokeId(0);
 
-  // 선택된 차량 모달 오픈
+  // 선택된 포켓몬 모달 오픈
   const navigate = useNavigate();
-  const handleSelectCar = (e: React.MouseEvent) => {
+  const handleSelectPoke = (e: React.MouseEvent) => {
     const id = Number(e.currentTarget.id);
     navigate(`/list/${id}`);
   };
 
-  // 선택된 차량 id element로 스크롤 이동 훅
+  // 선택된 포켓몬 id element로 스크롤 이동 훅
   const [targetRef, scrollToTarget] = useScrollToTarget();
   useEffect(() => {
     if (targetRef.current) {
       scrollToTarget();
     }
-    resetCarId();
-  }, [carId]);
+    resetPokeId();
+  }, [pokeId]);
 
   // 빈 화면일 때 출력
-  if (cars.length === 0) return <Empty />;
+  if (pokes.length === 0) return <Empty />;
 
   return (
     <Container>
-      <CarInfoContainer>
-        {cars.map((car: ICarProps) => (
-          <Car
-            {...car}
-            ref={car.carClassId === carId ? targetRef : null}
-            key={car.carClassId}
-            id={`${car.carClassId}`}
-            onClick={handleSelectCar}
+      <PokeInfoContainer>
+        {pokes.map((poke: IPokeProps) => (
+          <Poke
+            {...poke}
+            ref={poke.pokeClassId === pokeId ? targetRef : null}
+            key={poke.pokeClassId}
+            id={`${poke.pokeClassId}`}
+            onClick={handleSelectPoke}
           />
         ))}
-      </CarInfoContainer>
+      </PokeInfoContainer>
       <ButtonContainer>
         {hasNextPage ? (
           <AddButton onClick={handleFetchNextPage}>더보기</AddButton>
@@ -88,7 +88,7 @@ const Container = styled.div`
   padding: 32px 0 0 0;
 `;
 
-const CarInfoContainer = styled.div`
+const PokeInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SkeletonBox from '../common/SkeletonBox';
 
-function CarListSkeleton() {
+function PokeListSkeleton() {
   return (
     <Container>
       <ImageContainer>
@@ -43,4 +43,4 @@ const InfoContainer = styled.div`
   height: 40px;
 `;
 
-export default CarListSkeleton;
+export default PokeListSkeleton;

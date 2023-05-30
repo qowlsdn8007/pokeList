@@ -3,27 +3,27 @@ import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import Carousel from '../components/Carousal';
-import { CarList } from '../components/CarList';
+import { PokeList } from '../components/PokeList';
 import CarousalSkeleton from '../components/Carousal/CarousalSkeleton';
-import CarListSkeleton from '../components/CarList/CarListSkeleton';
-import CommonErrorFallback from '../components/common/Error/CarErrorFallback';
+import PokeListSkeleton from '../components/PokeList/PokeListSkeleton';
+import CommonErrorFallback from '../components/common/Error/PokeErrorFallback';
 
-export default function CarListPage() {
+export default function PokeListPage() {
   return (
     <Container>
       <Header>
-        <Title>차량 리스트</Title>
+        <Title>포켓몬 리스트</Title>
       </Header>
-      <Label>특가 차량</Label>
+      <Label>특가 포켓몬</Label>
       <ErrorBoundary FallbackComponent={CommonErrorFallback}>
         <Suspense fallback={<CarousalSkeleton />}>
           <Carousel />
         </Suspense>
       </ErrorBoundary>
-      <Label>모든 차량</Label>
+      <Label>모든 포켓몬</Label>
       <ErrorBoundary FallbackComponent={CommonErrorFallback}>
-        <Suspense fallback={<CarListSkeleton />}>
-          <CarList />
+        <Suspense fallback={<PokeListSkeleton />}>
+          <PokeList />
         </Suspense>
       </ErrorBoundary>
       <Outlet />

@@ -1,4 +1,4 @@
-function CarSvgIcon() {
+function PokeSvgIcon() {
   return (
     <div>
       <svg
@@ -34,4 +34,4 @@ function CarSvgIcon() {
   );
 }
 
-export default CarSvgIcon;
+export default PokeSvgIcon;
