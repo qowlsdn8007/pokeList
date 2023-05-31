@@ -1,0 +1,3 @@
+{
+  "/pokeClasses/:pokeClassId": "/pokeClass?pokeClassId=:pokeClassId"
+}

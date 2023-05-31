@@ -1,0 +1,728 @@
+{
+  "pokeClasses": [
+    {
+      "pokeClassId": 1,
+      "pokeClassName": "이상해씨",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/1.svg",
+      "price": 225123,
+      "discountPercent": 25,
+      "pokeTypeTags": ["특가", "인기"]
+    },
+    {
+      "pokeClassId": 2,
+      "pokeClassName": "이상해풀",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/2.svg",
+      "price": 325448,
+      "discountPercent": 37,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 3,
+      "pokeClassName": "이상해꽃",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/3.svg",
+      "price": 245852,
+      "discountPercent": 20,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 4,
+      "pokeClassName": "파이리",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/4.svg",
+      "price": 343142,
+      "discountPercent": 15,
+      "pokeTypeTags": ["특가", "인기"]
+    },
+    {
+      "pokeClassId": 5,
+      "pokeClassName": "리자드",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/5.svg",
+      "price": 316000,
+      "discountPercent": 0,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 6,
+      "pokeClassName": "리자몽",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/6.svg",
+      "price": 342000,
+      "discountPercent": 10,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 7,
+      "pokeClassName": "꼬부기",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/7.svg",
+      "price": 324000,
+      "discountPercent": 14,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 8,
+      "pokeClassName": "어니부기",
+      "pokeModel": "경형/소형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/8.svg",
+      "price": 215000,
+      "discountPercent": 30,
+      "pokeTypeTags": ["특가"]
+    },
+    {
+      "pokeClassId": 9,
+      "pokeClassName": "거북왕",
+      "pokeModel": "경형/소형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/9.svg",
+      "price": 198000,
+      "discountPercent": 15,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 10,
+      "pokeClassName": "캐터피",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/10.svg",
+      "price": 387000,
+      "discountPercent": 17,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 11,
+      "pokeClassName": "단데기",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/11.svg",
+      "price": 375000,
+      "discountPercent": 28,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 12,
+      "pokeClassName": "버터풀",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/12.svg",
+      "price": 366000,
+      "discountPercent": 26,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 13,
+      "pokeClassName": "뿔충이",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/13.svg",
+      "price": 389000,
+      "discountPercent": 8,
+      "pokeTypeTags": ["신차급"]
+    },
+    {
+      "pokeClassId": 14,
+      "pokeClassName": "딱충이",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/14.svg",
+      "price": 376000,
+      "discountPercent": 0,
+      "pokeTypeTags": ["특가"]
+    },
+    {
+      "pokeClassId": 15,
+      "pokeClassName": "독침붕",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/15.svg",
+      "price": 346000,
+      "discountPercent": 12,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 16,
+      "pokeClassName": "구구",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/16.svg",
+      "price": 567000,
+      "discountPercent": 25,
+      "pokeTypeTags": ["프리미엄"]
+    },
+    {
+      "pokeClassId": 17,
+      "pokeClassName": "피죤",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/17.svg",
+      "price": 287000,
+      "discountPercent": 25,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 18,
+      "pokeClassName": "피죤투",
+      "pokeModel": "수입",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/18.svg",
+      "price": 578000,
+      "discountPercent": 27,
+      "pokeTypeTags": ["프리미엄"]
+    },
+    {
+      "pokeClassId": 19,
+      "pokeClassName": "꼬렛",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/19.svg",
+      "price": 354000,
+      "discountPercent": 25,
+      "pokeTypeTags": ["특가"]
+    },
+    {
+      "pokeClassId": 20,
+      "pokeClassName": "레트라",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/20.svg",
+      "price": 225123,
+      "discountPercent": 25,
+      "pokeTypeTags": ["특가", "인기"]
+    },
+    {
+      "pokeClassId": 21,
+      "pokeClassName": "깨비참",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/21.svg",
+      "price": 325448,
+      "discountPercent": 37,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 22,
+      "pokeClassName": "깨비드릴조",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/22.svg",
+      "price": 245852,
+      "discountPercent": 20,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 23,
+      "pokeClassName": "아보",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/23.svg",
+      "price": 343142,
+      "discountPercent": 15,
+      "pokeTypeTags": ["특가", "인기"]
+    },
+    {
+      "pokeClassId": 24,
+      "pokeClassName": "아보크",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/24.svg",
+      "price": 316000,
+      "discountPercent": 0,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 25,
+      "pokeClassName": "피카츄",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/25.svg",
+      "price": 342000,
+      "discountPercent": 10,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 26,
+      "pokeClassName": "라이츄",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/26.svg",
+      "price": 324000,
+      "discountPercent": 14,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 27,
+      "pokeClassName": "모래두지",
+      "pokeModel": "경형/소형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/27.svg",
+      "price": 215000,
+      "discountPercent": 30,
+      "pokeTypeTags": ["특가"]
+    },
+    {
+      "pokeClassId": 28,
+      "pokeClassName": "고지",
+      "pokeModel": "경형/소형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/28.svg",
+      "price": 198000,
+      "discountPercent": 15,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 29,
+      "pokeClassName": "니드런♀",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/29.svg",
+      "price": 387000,
+      "discountPercent": 17,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 30,
+      "pokeClassName": "니드리나",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/30.svg",
+      "price": 375000,
+      "discountPercent": 28,
+      "pokeTypeTags": ["빠른대여", "인기"]
+    },
+    {
+      "pokeClassId": 31,
+      "pokeClassName": "니드퀸",
+      "pokeModel": "준중형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/31.svg",
+      "price": 366000,
+      "discountPercent": 26,
+      "pokeTypeTags": ["인기"]
+    },
+    {
+      "pokeClassId": 32,
+      "pokeClassName": "니드런♂",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/32.svg",
+      "price": 389000,
+      "discountPercent": 8,
+      "pokeTypeTags": ["신차급"]
+    },
+    {
+      "pokeClassId": 33,
+      "pokeClassName": "니드리노",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/33.svg",
+      "price": 376000,
+      "discountPercent": 0,
+      "pokeTypeTags": ["특가"]
+    },
+    {
+      "pokeClassId": 34,
+      "pokeClassName": "니드킹",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/34.svg",
+      "price": 346000,
+      "discountPercent": 12,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 35,
+      "pokeClassName": "삐삐",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/35.svg",
+      "price": 567000,
+      "discountPercent": 25,
+      "pokeTypeTags": ["프리미엄"]
+    },
+    {
+      "pokeClassId": 36,
+      "pokeClassName": "픽시",
+      "pokeModel": "중형/대형",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/36.svg",
+      "price": 287000,
+      "discountPercent": 25,
+      "pokeTypeTags": []
+    },
+    {
+      "pokeClassId": 37,
+      "pokeClassName": "식스테일",
+      "pokeModel": "수입",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/37.svg",
+      "price": 578000,
+      "discountPercent": 27,
+      "pokeTypeTags": ["프리미엄"]
+    },
+    {
+      "pokeClassId": 38,
+      "pokeClassName": "나인테일",
+      "pokeModel": "SUV",
+      "image": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/38.svg",
+      "price": 354000,
+      "discountPercent": 25,
+      "pokeTypeTags": ["특가"]
+    }
+  ],
+  "pokeClass": [
+    {
+      "pokeClassId": 1,
+      "pokeClassName": "이상해씨",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/1.svg",
+      "type": "풀, 독",
+      "pokeModel": "씨앗포켓몬",
+      "height": 0.7,
+      "weight": 6.9,
+      "characteristic": "심록"
+    },
+    {
+      "pokeClassId": 2,
+      "pokeClassName": "이상해풀",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/2.svg",
+      "type": "풀, 독",
+      "pokeModel": "씨앗포켓몬",
+      "height": 1.0,
+      "weight": 13.0,
+      "characteristic": "심록"
+    },
+    {
+      "pokeClassId": 3,
+      "pokeClassName": "이상해꽃",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/3.svg",
+      "type": "풀, 독",
+      "pokeModel": "씨앗포켓몬",
+      "height": 2.0,
+      "weight": 100.0,
+      "characteristic": "심록"
+    },
+    {
+      "pokeClassId": 4,
+      "pokeClassName": "파이리",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/4.svg",
+      "type": "불꽃",
+      "pokeModel": "도롱뇽포켓몬",
+      "height": 0.6,
+      "weight": 8.5,
+      "characteristic": "맹화"
+    },
+    {
+      "pokeClassId": 5,
+      "pokeClassName": "리자드",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/5.svg",
+      "type": "불꽃",
+      "pokeModel": "화염포켓몬",
+      "height": 1.1,
+      "weight": 19.0,
+      "characteristic": "맹화"
+    },
+    {
+      "pokeClassId": 6,
+      "pokeClassName": "리자몽",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/6.svg",
+      "type": "불꽃, 비행",
+      "pokeModel": "화염포켓몬",
+      "height": 1.7,
+      "weight": 90.5,
+      "characteristic": "맹화"
+    },
+    {
+      "pokeClassId": 7,
+      "pokeClassName": "꼬부기",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/7.svg",
+      "type": "물",
+      "pokeModel": "꼬마거북포켓몬",
+      "height": 0.5,
+      "weight": 9.0,
+      "characteristic": "급류"
+    },
+    {
+      "pokeClassId": 8,
+      "pokeClassName": "어니부기",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/8.svg",
+      "type": "물",
+      "pokeModel": "거북포켓몬",
+      "height": 1.0,
+      "weight": 22.5,
+      "characteristic": "급류"
+    },
+    {
+      "pokeClassId": 9,
+      "pokeClassName": "거북왕",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/9.svg",
+      "type": "물",
+      "pokeModel": "껍질포켓몬",
+      "height": 1.6,
+      "weight": 85.5,
+      "characteristic": "급류"
+    },
+    {
+      "pokeClassId": 10,
+      "pokeClassName": "캐터피",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/10.svg",
+      "type": "벌레",
+      "pokeModel": "애벌레포켓몬",
+      "height": 0.3,
+      "weight": 2.9,
+      "characteristic": "인분"
+    },
+    {
+      "pokeClassId": 11,
+      "pokeClassName": "단데기",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/11.svg",
+      "type": "벌레",
+      "pokeModel": "번데기포켓몬",
+      "height": 0.7,
+      "weight": 9.9,
+      "characteristic": "탈피"
+    },
+    {
+      "pokeClassId": 12,
+      "pokeClassName": "버터풀",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/12.svg",
+      "type": "벌레, 비행",
+      "pokeModel": "나비포켓몬",
+      "height": 1.1,
+      "weight": 32.0,
+      "characteristic": "복안"
+    },
+    {
+      "pokeClassId": 13,
+      "pokeClassName": "뿔충이",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/13.svg",
+      "type": "벌레, 독",
+      "pokeModel": "송충이포켓몬",
+      "height": 0.3,
+      "weight": 3.2,
+      "characteristic": "인분"
+    },
+    {
+      "pokeClassId": 14,
+      "pokeClassName": "딱충이",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/14.svg",
+      "type": "벌레, 독",
+      "pokeModel": "번데기포켓몬",
+      "height": 1.0,
+      "weight": 10.0,
+      "characteristic": "탈피"
+    },
+    {
+      "pokeClassId": 15,
+      "pokeClassName": "독침붕",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/15.svg",
+      "type": "벌레, 독",
+      "pokeModel": "독벌포켓몬",
+      "height": 1.5,
+      "weight": 29.5,
+      "characteristic": "벌레의알림"
+    },
+    {
+      "pokeClassId": 16,
+      "pokeClassName": "구구",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/16.svg",
+      "type": "노말, 비행",
+      "pokeModel": "아기새포켓몬",
+      "height": 0.3,
+      "weight": 1.8,
+      "characteristic": "날카로운눈, 갈지자걸음"
+    },
+    {
+      "pokeClassId": 17,
+      "pokeClassName": "피죤",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/17.svg",
+      "type": "노말, 비행",
+      "pokeModel": "새포켓몬",
+      "height": 1.1,
+      "weight": 30.0,
+      "characteristic": "날카로운눈, 갈지자걸음"
+    },
+    {
+      "pokeClassId": 18,
+      "pokeClassName": "피죤투",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/18.svg",
+      "type": "노말, 비행",
+      "pokeModel": "새포켓몬",
+      "height": 1.5,
+      "weight": 39.5,
+      "characteristic": "날카로운눈, 갈지자걸음"
+    },
+    {
+      "pokeClassId": 19,
+      "pokeClassName": "꼬렛",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/19.svg",
+      "type": "노말",
+      "pokeModel": "쥐포켓몬",
+      "height": 0.3,
+      "weight": 3.5,
+      "characteristic": "도주, 근성"
+    },
+    {
+      "pokeClassId": 20,
+      "pokeClassName": "레트라",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/20.svg",
+      "type": "노말",
+      "pokeModel": "쥐포켓몬",
+      "height": 0.7,
+      "weight": 18.5,
+      "characteristic": "도주, 근성"
+    },
+    {
+      "pokeClassId": 21,
+      "pokeClassName": "깨비참",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/21.svg",
+      "type": "노말, 비행",
+      "pokeModel": "새포켓몬",
+      "height": 1.1,
+      "weight": 30.0,
+      "characteristic": "날카로운눈"
+    },
+    {
+      "pokeClassId": 22,
+      "pokeClassName": "깨비드릴조",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/22.svg",
+      "type": "노말, 비행",
+      "pokeModel": "부리포켓몬",
+      "height": 1.5,
+      "weight": 39.5,
+      "characteristic": "날카로운눈"
+    },
+    {
+      "pokeClassId": 23,
+      "pokeClassName": "아보",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/23.svg",
+      "type": "독",
+      "pokeModel": "뱀포켓몬",
+      "height": 2.0,
+      "weight": 6.9,
+      "characteristic": "탈피, 위협"
+    },
+    {
+      "pokeClassId": 24,
+      "pokeClassName": "아보크",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/24.svg",
+      "type": "독",
+      "pokeModel": "코브라포켓몬",
+      "height": 3.5,
+      "weight": 65.0,
+      "characteristic": "탈피, 위협"
+    },
+    {
+      "pokeClassId": 25,
+      "pokeClassName": "피카츄",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/25.svg",
+      "type": "전기",
+      "pokeModel": "쥐포켓몬",
+      "height": 0.4,
+      "weight": 6.0,
+      "characteristic": "정전기"
+    },
+    {
+      "pokeClassId": 26,
+      "pokeClassName": "라이츄",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/26.svg",
+      "type": "전기",
+      "pokeModel": "쥐포켓몬",
+      "height": 0.8,
+      "weight": 30.0,
+      "characteristic": "정전기"
+    },
+    {
+      "pokeClassId": 27,
+      "pokeClassName": "모래두지",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/27.svg",
+      "type": "땅",
+      "pokeModel": "쥐포켓몬",
+      "height": 0.3,
+      "weight": 12.0,
+      "characteristic": "모래숨기"
+    },
+    {
+      "pokeClassId": 28,
+      "pokeClassName": "고지",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/28.svg",
+      "type": "땅",
+      "pokeModel": "쥐포켓몬",
+      "height": 1.0,
+      "weight": 29.5,
+      "characteristic": "모래숨기"
+    },
+    {
+      "pokeClassId": 29,
+      "pokeClassName": "니드런♀",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/29.svg",
+      "type": "독",
+      "pokeModel": "독침포켓몬",
+      "height": 0.4,
+      "weight": 7.0,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 30,
+      "pokeClassName": "니드리나",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/30.svg",
+      "type": "독",
+      "pokeModel": "독침포켓몬",
+      "height": 0.8,
+      "weight": 20.0,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 31,
+      "pokeClassName": "니드퀸",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/31.svg",
+      "type": "독, 땅",
+      "pokeModel": "드릴포켓몬",
+      "height": 1.3,
+      "weight": 60.0,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 32,
+      "pokeClassName": "니드런♂",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/32.svg",
+      "type": "독",
+      "pokeModel": "독침포켓몬",
+      "height": 0.5,
+      "weight": 9.0,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 33,
+      "pokeClassName": "니드리노",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/33.svg",
+      "type": "독",
+      "pokeModel": "독침포켓몬",
+      "height": 0.9,
+      "weight": 19.5,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 34,
+      "pokeClassName": "니드킹",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/34.svg",
+      "type": "독, 땅",
+      "pokeModel": "드릴포켓몬",
+      "height": 1.4,
+      "weight": 62.0,
+      "characteristic": "독가시, 투쟁심"
+    },
+    {
+      "pokeClassId": 35,
+      "pokeClassName": "삐삐",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/35.svg",
+      "type": "페어리",
+      "pokeModel": "요정포켓몬",
+      "height": 0.6,
+      "weight": 7.5,
+      "characteristic": "헤롱헤롱바디, 매직가드"
+    },
+    {
+      "pokeClassId": 36,
+      "pokeClassName": "픽시",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/36.svg",
+      "type": "페어리",
+      "pokeModel": "요정포켓몬",
+      "height": 1.3,
+      "weight": 40.0,
+      "characteristic": "헤롱헤롱바디, 매직가드"
+    },
+    {
+      "pokeClassId": 37,
+      "pokeClassName": "식스테일",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/37.svg",
+      "type": "불꽃",
+      "pokeModel": "여우포켓몬",
+      "height": 0.6,
+      "weight": 9.9,
+      "characteristic": "타오르는불꽃"
+    },
+    {
+      "pokeClassId": 38,
+      "pokeClassName": "나인테일",
+      "pokeImage": "https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/38.svg",
+      "type": "불꽃",
+      "pokeModel": "여우포켓몬",
+      "height": 1.1,
+      "weight": 19.9,
+      "characteristic": "타오르는불꽃"
+    }
+  ]
+}
