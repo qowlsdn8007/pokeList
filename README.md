@@ -5,8 +5,10 @@
 ### commit 내역이 합쳐진 점 양해 부탁드립니다.
 
 ## GIF
-
+### 동작
 ![동작확인](https://github.com/qowlsdn8007/pokeList/assets/33804074/fa732cc1-95ee-404e-92e5-1afb83fd22ff)
+### 로딩 및 에러 화면
+![로딩 및 에러화면](https://github.com/qowlsdn8007/pokeList/assets/33804074/8d99eb24-1c28-4dad-80da-9ed4f54af6a7)
 
 ## 기능
 
