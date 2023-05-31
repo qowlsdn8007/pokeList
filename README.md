@@ -6,7 +6,7 @@
 
 ## GIF
 
-![동작확인](https://github.com/qowlsdn8007/pokeList/assets/33804074/40779734-de5a-4c74-bd23-83bdecb7148a)
+![동작확인](https://github.com/qowlsdn8007/pokeList/assets/33804074/fa732cc1-95ee-404e-92e5-1afb83fd22ff)
 
 ## 기능
 
